@@ -1,0 +1,59 @@
+html {
+  background-color: #ffffff;
+  background-image: url(/images/background.png);
+  background-repeat: repeat;
+  background-position: top center;
+}
+body {
+  background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+}
+/* Set floating dom-heading margins to 0 */
+[class*="dom-heading"] {
+  margin: 0;
+}
+body .pull-center{
+  display: block !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form .row {
+    margin-left: 0;
+}
+
+.container .row-fluid .span12 .navbar{
+    margin: 10px 0 10px 0;
+}
+.container-fluid .row-fluid .span12 .control-group .controls input.textinput.textinput-1 {
+    font-size: 20px;
+    line-height: 26px;
+}
+.container-fluid .row-fluid .span12 .control-group .controls input.textinput.textinput-2 {
+    -moz-box-shadow: 0px 0px 8px 0px rgba(82, 168, 236, 0.6), inset 0px 1px 1px 0px rgba(0, 0, 0, 0.0745098);
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(82, 168, 236, 0.6), inset 0px 1px 1px 0px rgba(0, 0, 0, 0.0745098);
+    -o-box-shadow: 0px 0px 8px 0px rgba(82, 168, 236, 0.6), inset 0px 1px 1px 0px rgba(0, 0, 0, 0.0745098);
+    box-shadow: 0px 0px 8px 0px rgba(82, 168, 236, 0.6), inset 0px 1px 1px 0px rgba(0, 0, 0, 0.0745098);
+}
+.container-fluid .row-fluid .span12 .form-inline .control-group .controls select {
+    width: 200px;
+}
+.container-fluid .row-fluid .span12 .form-inline .control-group .controls .span9.span9-1 {
+    height: 90px;
+}
+.container-fluid .row-fluid .span12 .form-inline .control-group .controls input.textinput.textinput-3 {
+    -moz-box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.0745098), 0px 0px 8px 0px rgba(82, 168, 236, 0.6);
+    -webkit-box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.0745098), 0px 0px 8px 0px rgba(82, 168, 236, 0.6);
+    -o-box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.0745098), 0px 0px 8px 0px rgba(82, 168, 236, 0.6);
+    box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.0745098), 0px 0px 8px 0px rgba(82, 168, 236, 0.6);
+}
+.container-fluid .row-fluid .span12 .control-group .controls .span9.span9-1 {
+    height: 90px;
+}
+.container-fluid .table thead tr th.th-1 {
+    text-align: right;
+}
+.container-fluid .table tbody tr td.td-1 {
+    text-align: right;
+}

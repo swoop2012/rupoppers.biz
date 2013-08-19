@@ -1,0 +1,373 @@
+/* MAIN STYLE */
+* { margin:0; padding:0; font-style:normal; font-size:11px; font-family:Verdana, Tahoma, Arial, 'Times New Roman', Times, sans-serif; color:#333; }
+html, body { min-width:1000px; height:100%; border:0; text-align:center; }
+body { background:url(/img/white_bg.gif) center top repeat-y #f5f3f2; }
+
+img { border:0; }
+a { text-decoration:none; color:#06f; }
+a:link { }
+a:visited { }
+a:hover { text-decoration:underline; color:#00f; }
+a:active { color:#f00; }
+
+ul li { list-style:none; }
+.img_header { float:left; width:100%; margin:10px 0; }
+/* /MAIN STYLE */
+
+/* SKELETON */
+#header { width:100%; height:160px; background:url(/img/header_bg_line.gif) repeat-x #f5f3f2; }
+#header_bg { width:100%; height:160px; background:url(/img/header_bg2.jpg) center top no-repeat; }
+#header_block { position:relative; width:999px; height:160px; margin:0 auto; }
+#min_height { width:1px; height:100%; float:left; margin-top:-160px; }
+#middle_bg { background:url(/img/middle_bg.jpg) center top no-repeat;padding: 0 0 177px; }
+#middle_block { width:999px; margin:0 auto; }
+#right_block { float:right; width:259px; padding-bottom:20px; }
+#content_block { margin-right:259px; padding:0 30px 157px; text-align:left; }
+#footer { width:100%; height:157px; float:left; margin-top:-157px; background:url(/img/footer_bg_line.gif) repeat-x #f0ecea; }
+#footer_bg { width:100%; height:157px; background:url(/img/footer_bg.gif) center top no-repeat; }
+#footer_block { position:relative; width:999px; height:157px; margin:0 auto; }
+/* /SKELETON */
+
+/* ШАПКА */
+#header .logo { position:absolute; top:15px; left:20px; }
+#header .contact { position:absolute; top:15px; right:20px; font-size:17px; color:#fde0bc; text-align:right; }
+#header .contact div { font-size:28px; color:#faefe3; vertical-align:top; }
+#header .contact span { font-size:14px; color:#fff; vertical-align:top; }
+#header .navi { position:absolute; top:106px; right:0; left:0; font-size:0; text-align:center; }
+#header .navi a { display:inline-block; height:30px; margin-left:1px; padding:10px 40px 0; border-left:1px solid #c8d3c1; background:url(/img/navi_bg.gif) repeat-x #1f6256; font-size:15px; color:#fff; }
+#header .navi a:first-child { margin-left:0; border-left:0; }
+#header .navi a.current { background:url(/img/navi_bg_light.gif) repeat-x #50937a; }
+#header .navi a:hover { background:url(/img/navi_bg_light.gif) repeat-x #50937a; }
+/* /ШАПКА */
+
+/* ПРАВАЯ КОЛОНКА */
+#right_block .block_icon, #right_block .block_light, #basket, .block_white { padding:20px 30px; font-size:12px; text-align:left; }
+/* КОРЗИНА */
+#basket { margin:27px 27px 0 0; padding-top:0; background:url(/img/basket_bg.gif) left bottom no-repeat; text-align:center; }
+#basket a { display:block; height:19px; margin-bottom:10px; padding-left:30px; background:url(/img/basket_icon.gif) no-repeat; font:bold 15px Tahoma; color:#6d4e4a; text-align:left; }
+#basket .button { display:inline-block; height:21px; margin:15px 0 2px 0; padding:3px 30px 0 20px; border-radius:3px; background:url(/img/basket_btn.gif) right top no-repeat #afca75; font-size:13px; font-weight:normal; color:#fff; }
+#basket p { font-size:12px; color:#333; text-align:left; }
+#basket p span { font-weight:bold; color:#ba3e2a; }
+/* /КОРЗИНА */
+/* ЗАКАЗ */
+.block_white { margin:27px 29px 0 0; padding:20px 30px 20px 45px; border-radius:0 0 5px 5px; background:url(/img/block_white_top.gif) repeat-x #fcfaf8; }
+.block_white div { font-size:12px; color:#333; }
+.block_white .title { margin:0 0 15px 0; font:bold 15px Tahoma; color:#333; text-align:center; }
+.block_white input[type="radio"] { margin:4px 0 5px; vertical-align:middle; }
+.block_white input[type="text"] { display:block; width:140px; height:28px; margin-top:9px; padding:0 10px; border:1px solid #e1dcd9; border-radius:3px; font-size:12px; color:#333; }
+.block_white input[type="submit"] { display:block; width:160px; height:28px; margin-top:15px; border:0; border-radius:3px; background:#afca75; font-size:13px; color:#fff; text-align:center; cursor:pointer; }
+.block_white textarea { display:block; width:140px; height:60px; margin-top:9px; padding:5px 10px; border:1px solid #e1dcd9; border-radius:3px; font-size:12px; color:#333; overflow:auto; resize:vertical; }
+.block_white input[type="text"], .block_white textarea {
+    -moz-box-shadow:inset 0 0 3px #ccc;
+    -webkit-box-shadow:inset 0 0 3px #ccc;
+    -o-box-shadow:inset 0 0 3px #ccc;
+    box-shadow:inset 0 0 3px #ccc;
+}
+/* /ЗАКАЗ */
+/* СКИДКИ, ОПЛАТА, ДОСТАВКА */
+#right_block .block_red { margin:27px 29px 0 0; border-radius:0 0 5px 5px; background:url(/img/block_red_bg.jpg) right bottom no-repeat #d96c5e; }
+#right_block .block_red .block_top { background:url(/img/block_red_top.gif) repeat-x; }
+#right_block .block_red .block_icon { padding:20px 30px 50px; background:url(/img/block_red_icon.jpg) no-repeat; }
+#right_block .block_red .title { margin-bottom:20px; margin-left:50px; font-size:12px; color:#f9eabe; text-transform:uppercase; }
+#right_block .block_red .title span { display:block; font-size:18px; color:#f9eabe; text-transform:uppercase; }
+#right_block .block_red p { margin-top:10px; font-size:11px; color:#fff; }
+#right_block .block_red p b { margin-top:10px; font-size:11px; color:#fff; }
+#right_block .block_red p a { font-size:11px; color:#ffe4aa; text-decoration:underline; }
+#right_block .block_red p a:hover { text-decoration:none; }
+
+#right_block .block_blue { margin:27px 29px 0 0; border-radius:0 0 5px 5px; background:#f6f6f6; }
+#right_block .block_blue .block_top { background:url(/img/block_blue_top.gif) repeat-x; }
+#right_block .block_blue .block_icon { background:url(/img/block_blue_icon.jpg) no-repeat; }
+#right_block .block_blue .title { margin-bottom:20px; margin-left:30px; font-size:12px; color:#5284b8; text-transform:uppercase; }
+#right_block .block_blue .title span { display:block; font-size:18px; color:#5284b8; text-transform:uppercase; }
+#right_block .block_blue p { display:block; margin:20px 0 15px 0; padding-left:8px; background:url(/img/block_blue_arrow.gif) left 5px no-repeat; font-size:11px; color:#333; }
+#right_block .block_blue p span { font-size:10px; color:#54a8e1; }
+
+#right_block .block_brown { margin:27px 29px 0 0; border-radius:0 0 5px 5px; background:url(/img/block_brown_bg.jpg) right bottom no-repeat #eac5a5; }
+#right_block .block_brown .block_top { background:url(/img/block_brown_top.gif) repeat-x; }
+#right_block .block_brown .block_icon { background:url(/img/block_brown_icon.jpg) no-repeat; }
+#right_block .block_brown .title { margin-bottom:20px; margin-left:50px; font-size:12px; color:#b45043; text-transform:uppercase; }
+#right_block .block_brown .title span { display:block; font-size:18px; color:#b45043; text-transform:uppercase; }
+#right_block .block_brown p { margin-top:10px; font-size:11px; color:#744842; }
+#right_block .block_brown p span { color:#b45043; }
+
+#right_block .block_light { margin:27px 29px 0 0; border-radius:0 0 5px 5px; background:url(/img/block_light_top.gif) repeat-x #f6f6f6; font-size:11px; }
+/* /СКИДКИ, ОПЛАТА, ДОСТАВКА */
+/* /ПРАВАЯ КОЛОНКА */
+
+/* КОНТЕНТ */
+#content_block p { margin:10px 0; line-height:16px; }
+
+/* ГЛАВНАЯ */
+#content_main { float:left; width:100%; }
+#content_main .items { float:left; width:100%; }
+#content_main .item { float:left; width:140px; margin:10px 30px 25px 0; text-align:center; }
+#content_main .item img { display:block; width:136px; height:200px; margin-bottom:5px; border:2px solid #f3ded2; border-radius:4px; }
+#content_main .item a { color:#219adf; text-decoration:underline; }
+#content_main .item a:hover { text-decoration:none; }
+#content_main .item span { display:block; margin:5px 0 10px; font-size:10px; color:#7b7b7b; }
+#content_main .item .button { padding:8px 0; background:#d96c5e; border-radius:13px; font-size:12px; font-weight:bold; color:#fbe3c1; text-transform:uppercase; }
+#content_main .item .button a { display:inline-block; margin-left:10px; font-size:12px; color:#fff; text-decoration:none; }
+#content_main .item .button a:hover { text-decoration:underline; }
+/* /ГЛАВНАЯ */
+
+/* ТОВАР */
+#content_prod { float:left; width:100%; }
+#content_prod .items { float:left; width:100%; }
+#content_prod .item { float:left; width:80px; margin:10px 30px 25px 20px; text-align:center; }
+#content_prod .item img { display:block; width:76px; height:100px; border:2px solid #f3ded2; border-radius:4px; }
+#content_prod .item a { color:#219adf; text-decoration:underline; }
+#content_prod .item a:hover { text-decoration:none; }
+#content_prod .item .button { margin-top:10px; padding:3px 0; background:#d96c5e; border-radius:10px; font-size:12px; font-weight:bold; color:#fbe3c1; text-transform:uppercase; }
+
+#content_prod .otzuv { position:relative; float:left; width:100%; margin:10px 0; }
+#content_prod .otzuv .up { position:absolute; top:0; width:100%; height:15px; background:url(/img/otzuv_bg.gif) 28px 0 no-repeat; }
+#content_prod .otzuv .text { margin-top:13px; padding:15px 30px 10px; border-right:2px solid #f3ded2; border-bottom:2px solid #f3ded2; border-left:2px solid #f3ded2; border-radius:4px; background:url(/img/otzuv_bg_line.gif) repeat-x; }
+#content_prod .otzuv .text div { font-size:13px; font-weight:bold; color:#ab483c; }
+#content_prod .otzuv .text p { margin:5px 0; font:italic 12px Arial; }
+
+#content_prod .otzuv_form { float:left; width:400px; text-align:right; }
+#content_prod .otzuv_form * { font-size:12px; font-weight:bold; vertical-align:middle; }
+#content_prod .otzuv_form div { font-size:15px; text-align:left; }
+#content_prod .otzuv_form input[type="submit"] { width:120px; height:33px; border:0; background:url(/img/submit_btn_bg.gif) left bottom no-repeat; font-size:11px; cursor:pointer; }
+#content_prod .otzuv_form input[type="text"] { width:150px; height:28px; padding:0 10px; border:1px solid #e1dcd9; border-radius:3px; font-size:12px; color:#333; }
+#content_prod .otzuv_form textarea { width:375px; height:60px; margin:10px 0 20px; padding:5px 10px; border:1px solid #e1dcd9; border-radius:3px; font-size:12px; color:#333; overflow:auto; resize:vertical; }
+#content_prod .otzuv_form input[type="text"], #content_prod .otzuv_form textarea {
+    font-weight:normal;
+    -moz-box-shadow:inset 0 0 3px #ccc;
+    -webkit-box-shadow:inset 0 0 3px #ccc;
+    -o-box-shadow:inset 0 0 3px #ccc;
+    box-shadow:inset 0 0 3px #ccc;
+}
+
+#content_prod .item_view { }
+#content_prod .item_view h1 { margin-bottom:20px; font-size:16px; }
+#content_prod .item_view img { float:left; display:block; width:136px; height:200px; border:2px solid #f3ded2; border-radius:4px; }
+#content_prod .item_view .info { float:left; width:500px; margin-left:30px; }
+#content_prod .item_view .info div { margin:10px 0 20px; font-size:14px; font-weight:bold; }
+#content_prod .item_view .info p { margin-top:0; }
+#content_prod .item_view .info table { width:98%; }
+#content_prod .item_view .info tr { height:30px; }
+#content_prod .item_view .info tr:hover { background:#f9efe7; }
+#content_prod .item_view .info tr.color { background:#f9efe7; }
+#content_prod .item_view .info td { padding-left:20px; }
+#content_prod .item_view .info td.price { width:120px; padding-left:0; font:bold 12px Verdana; color:#ba3e2a; text-align:center; }
+#content_prod .item_view .info td.button { width:82px; padding-left:0; }
+#content_prod .item_view .info a.button { display:block; width:70px; height:17px; padding-top:3px; background:#d96c5e; border-radius:10px; font-size:12px; color:#fff; text-align:center; text-transform:uppercase; }
+
+
+/* /ТОВАР */
+
+/* КОРЗИНА */
+#content_basket { float:left; width:100%; }
+
+#content_basket table { width:100%;float: left; }
+#content_basket tr { height:30px; }
+#content_basket tr.color { background:#f9efe7; }
+
+#content_basket th { padding-left:20px; text-align:left; }
+#content_basket th.price, #content_basket th.count, #content_basket th.sum { padding-left:0; text-align:center; }
+
+#content_basket td { padding-left:20px; font:normal 12px Verdana; }
+#content_basket td.price { width:120px; padding-left:0; color:#333; text-align:center; }
+#content_basket tr.free td.price { color:#ba3e2a; }
+#content_basket td.count { padding:0; text-align:center; }
+#content_basket td.count input { width:30px; height:16px; margin-top:0; padding:0 5px; border:1px solid #e1dcd9; border-radius:4px; font-size:11px; color:#333; text-align:center; }
+#content_basket td.sum { width:120px; padding-left:0; color:#ba3e2a; text-align:center; }
+#content_basket td.sum span{color:#ba3e2a;}
+#content_basket td.del { width:20px; padding-left:0; text-align:left; }
+#content_basket td.del a { font-weight:bold; color:#ba3e2a; }
+#content_basket a.button { display:block; width:70px; height:17px; padding-top:3px; background:#d96c5e; border-radius:10px; font-size:12px; color:#fff; text-align:center; text-transform:uppercase; }
+
+#content_basket tr.result { height:30px; }
+#content_basket tr.result td.back { padding-left:0; }
+#content_basket tr.result td.back a { display:block; width:180px; height:20px; padding:7px 0 3px 10px; background:url(/img/left_arrow.gif) no-repeat #d8806c; border-radius:3px; font:normal 12px Verdana; color:#fff; text-align:center; text-transform:uppercase; }
+#content_basket tr.result td.price input { display:block; width:115px; height:30px; margin:0; padding:0; background:#d8806c; border-radius:3px; font:normal 12px Verdana; color:#fff; text-align:center; text-transform:uppercase; }
+#content_basket tr.result td.sum { width:auto; height:50px; padding-right:10px; padding-left:0; font-size:12px; color:#333; text-align:right; }
+#content_basket tr.result td.sum span { font:bold 12px Verdana; color:#ba3e2a; }
+
+
+#content_basket .form_item, #content_basket .form_area { float:left; width:100%; height:50px; text-align:right; }
+#content_basket .form_area { height:auto; margin-bottom:10px; }
+
+#content_basket .form_title { float:left; width:100%; margin:10px 0; text-align:left; font-size:12px; }
+#content_basket .form_title span { display:block; font-size:12px; font-weight:bold; }
+
+#content_basket .form_item .form_r { margin-bottom:7px; font-size:12px; text-align:left; }
+#content_basket .form_item .form_r input { margin-right:10px; vertical-align:top; }
+
+#content_basket .form_l { float:left; width:200px; text-align:left; font:bold 12px Verdana; }
+#content_basket .form_l span { display:block; font:normal 10px Verdana; color:#666; }
+
+#content_basket .form_f { float:left; }
+#content_basket .form_f input[type="text"] { width:200px; height:28px; padding:0 10px; border:1px solid #e1dcd9; border-radius:3px; font-size:12px; color:#333; }
+#content_basket .form_f textarea, #content_basket .form_comment textarea { width:200px; height:60px; margin:10px 0 20px; padding:5px 10px; border:1px solid #e1dcd9; border-radius:3px; font-size:12px; color:#333; overflow:auto; resize:vertical; }
+#content_basket .form_f input[type="text"], #content_basket .form_f textarea, #content_basket .form_comment textarea {
+    font-weight:normal;
+    -moz-box-shadow:inset 0 0 3px #ccc;
+    -webkit-box-shadow:inset 0 0 3px #ccc;
+    -o-box-shadow:inset 0 0 3px #ccc;
+    box-shadow:inset 0 0 3px #ccc;
+}
+
+#content_basket .form_s { float:left; width:10px; margin-top:5px; font:bold 18px Arial; color:#ba3e2a; }
+#content_basket .form_area .form_l { margin-top:20px; }
+#content_basket .form_area .form_s { margin-top:30px; }
+
+#content_basket .form_comment { float:left; width:100%; height:100px; font:bold 12px Verdana; }
+#content_basket .form_comment textarea { display:block; width:400px; }
+
+#content_basket .form_end { float:left; width:230px; height:30px; margin:10px 0; padding-right:70px; font-size:11px; color:#666; }
+#content_basket .form_end span { font:bold 12px Verdana; color:#ba3e2a; }
+#content_basket input[type="submit"] { width:120px; height:33px; margin-top:10px; border:0; background:url(/img/submit_btn_bg.gif) left bottom no-repeat; font-size:11px; font-weight:bold; cursor:pointer; }
+
+/* ОПЛАТА */
+#pay_block { float:left; width:100%; margin-bottom:10px; }
+#oplata_current { float:left; height:40px; background:url(/img/icon_nal.gif) 17px 8px no-repeat; cursor:pointer; }
+#oplata_current div { height:22px; padding:13px 10px 0 50px; font:bold 12px Verdana; color:#333; }
+
+#other_pay { display:inline-block; margin-top:10px; margin-left:90px; font:bold 13px Verdana; color:#219adf; border-bottom:1px dashed #219adf; }
+#other_pay:hover { text-decoration:none; }
+
+#pay_block .other_pay { float:left; width:600px; }
+#pay_block .nal, #pay_block .wm, #pay_block .kv, #pay_block .ya, #pay_block .qw { float:left; width:260px; height:40px; background:url(/img/icon_qw.gif) 17px 5px no-repeat; }
+#pay_block .nal div, #pay_block .wm div, #pay_block .kv div, #pay_block .ya div, #pay_block .qw div { height:27px; padding-top:8px; }
+#pay_block .nal { background:url(/img/icon_nal.gif) 17px 5px no-repeat; cursor:pointer; }
+#pay_block .wm { background:url(/img/icon_wm.gif) 17px 5px no-repeat; cursor:pointer; }
+#pay_block .kv { background:url(/img/icon_kv.gif) 17px 5px no-repeat; cursor:pointer; }
+#pay_block .ya { background:url(/img/icon_ya.gif) 17px 5px no-repeat; cursor:pointer; }
+#pay_block .qw { background:url(/img/icon_qw.gif) 17px 5px no-repeat; cursor:pointer; }
+#pay_block .nal input, #pay_block .wm input, #pay_block .kv input, #pay_block .ya input, #pay_block .qw input { margin-right:40px; }
+#pay_block .nal div span, #pay_block .wm div span, #pay_block .kv div span, #pay_block .ya div span, #pay_block .qw div span { font:bold 13px Verdana; color:#219adf; border-bottom:1px dashed #219adf; }
+
+.pay_item {  }
+.pay_item_selected {  }
+/* /ОПЛАТА */
+/* /КОРЗИНА */
+
+/* СПАСИБО */
+#content_final { float:left; width:100%; }
+
+#content_final table { width:100%; }
+#content_final tr { height:30px; }
+#content_final tr.color { background:#f9efe7; }
+
+#content_final th { padding-left:20px; text-align:left; }
+#content_final th.price, #content_final th.count, #content_final th.sum { padding-left:0; text-align:center; }
+
+#content_final td { padding-left:20px; font:normal 12px Verdana; }
+#content_final td.price { width:120px; padding-left:0; color:#333; text-align:center; }
+#content_final tr.free td.price { color:#ba3e2a; }
+#content_final td.sum { width:120px; padding-left:0; color:#ba3e2a; text-align:center; }
+#content_final td.del { width:20px; padding-left:0; text-align:left; }
+#content_final td.del a { font-weight:bold; color:#ba3e2a; }
+#content_final a.button { display:block; width:70px; height:17px; padding-top:3px; background:#d96c5e; border-radius:10px; font-size:12px; color:#fff; text-align:center; text-transform:uppercase; }
+
+#content_final tr.result { height:30px; }
+#content_final tr.result td.back { padding-left:0; }
+#content_final tr.result td.back a { display:block; width:180px; height:20px; padding:7px 0 3px 10px; background:url(/img/left_arrow.gif) no-repeat #d8806c; border-radius:3px; font:normal 12px Verdana; color:#fff; text-align:center; text-transform:uppercase; }
+#content_final tr.result td.price a { display:block; width:115px; height:20px; padding:7px 0 3px 0; background:#d8806c; border-radius:3px; font:normal 12px Verdana; color:#fff; text-align:center; text-transform:uppercase; }
+#content_final tr.result td.sum { width:auto; height:50px; padding-right:10px; padding-left:0; font-size:12px; color:#333; text-align:right; }
+#content_final tr.result td.sum span { font:bold 12px Verdana; color:#ba3e2a; }
+
+#content_final .text_block { margin:5px 0 20px; font:normal 12px Verdana; line-height:16px; }
+#content_final .text_block a { font:normal 12px Verdana; color:#219adf; text-decoration:underline; }
+#content_final .text_block a:hover { text-decoration:none; }
+
+#content_final .form_title { float:left; width:100%; margin:50px 0 10px; text-align:left; font-size:12px; }
+#content_final .form_title span { display:block; font-size:12px; font-weight:bold; }
+
+/* /СПАСИБО */
+
+/* ПРОСТО ТЕКСТ */
+.content_text { float:left; width:100%; }
+.content_text h1 { margin-bottom:10px; font-size:18px; }
+.content_text h2 { margin-bottom:10px; font-size:16px; }
+.content_text h3 { margin-bottom:10px; font-size:16px; }
+.content_text li { height:30px; padding-left:20px; background:url(/img/list_item.gif) left 4px no-repeat; font-style:italic; }
+/* /ПРОСТО ТЕКСТ */
+/* /КОНТЕНТ */
+
+/* ПОДВАЛ */
+#footer .copy { position:absolute; top:67px; left:30px; font-size:11px; color:#666; text-align:center; }
+#footer .copy span { display:block; font:bold 14px Tahoma; color:#666; }
+#footer .contact { position:absolute; top:67px; right:37px; text-align:right; line-height:20px; }
+#footer .contact span { display:block; font:bold 13px Tahoma; color:#666; }
+#footer .contact a { font-size:12px; color:#219adf; text-decoration:underline; }
+#footer .contact a:hover { text-decoration:none; }
+/* /ПОДВАЛ */
+
+/* RADIO */
+.dostavka_block { float:left; width:100%; height:90px; text-align:center; }
+.dostavka_block.payment-select {
+    height: auto;
+}
+div.dostavka_item {
+    float:left;
+    width : 226px;
+    height : 77px;
+    margin: 0 50px 25px 0;
+    background : url(/img/dostavka_item.gif) no-repeat;
+    font:normal 11px Tahoma;
+    cursor : pointer;
+}
+div.dostavka_item.selected {
+    float:left;
+    width : 226px;
+    height : 77px;
+    margin-right:50px;
+    background : url(/img/dostavka_checked.gif) no-repeat;
+    font:normal 11px Tahoma;
+    cursor : pointer;
+}
+div.dostavka_item input, div.dostavka_item.selected input {
+    margin-right:10px;
+    margin-left:-27px;
+}
+div.dostavka_item span, div.dostavka_item.selected span {
+    display : inline-block;
+    margin-top : 12px;
+    margin-bottom : 5px;
+    border-bottom:1px dashed #219adf;
+    font:bold 14px Tahoma;
+    color:#219adf;
+}
+
+.block_white .fast_order_item {
+    float:left;
+    width : 226px;
+    height : 17px;
+    margin-right:50px;
+    margin-bottom:10px;
+    background : url(/img/fast_order_item.gif) left 4px no-repeat;
+    font:normal 11px Tahoma;
+    cursor : pointer;
+}
+.block_white .fast_order_item_selected {
+    float:left;
+    width : 226px;
+    height : 17px;
+    margin-right:50px;
+    margin-bottom:10px;
+    background : url(/img/fast_order_checked.gif) left 4px no-repeat;
+    font:normal 11px Tahoma;
+    cursor : pointer;
+}
+.block_white .fast_order_item input, .block_white .fast_order_item_selected input {
+    margin-right:10px;
+    margin-left:0;
+}
+.block_white .fast_order_item span, .block_white .fast_order_item_selected span {
+    display : inline-block;
+    margin-top : 12px;
+    margin-bottom : 5px;
+    border-bottom:1px dashed #219adf;
+    font:bold 14px Tahoma;
+    color:#219adf;
+}
+div.errorMessage{
+    margin: 0 100px;
+    color:darkred;
+}
+
+/* /RADIO */
