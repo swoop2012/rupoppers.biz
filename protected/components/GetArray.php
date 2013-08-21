@@ -44,7 +44,7 @@ class GetArray extends CComponent{
     }
 
     public static function getWmid(){
-    return GetArray::getSetting('Type')==1?GetArray::getSetting('idWebmaster'):Yii::app()->session['wmid'];
+        return GetArray::getSetting('Type')==1?GetArray::getSetting('idWebmaster'):Cookie::get('wmid');
     }
 }
 ?>

@@ -35,8 +35,8 @@ class Controller extends CController
         if($app->request->isAjaxRequest)
             return parent::beforeAction($action);
         $this->setReferer();
-        $subaccountid =$app->session['subaccountid'];
-        $wmid = $app->session['wmid'];
+        $subaccountid = Cookie::get('subaccountid');
+        $wmid = Cookie::get('wmid');
 
         $checkCode = $this->getCheckCode();
         $cookie = Cookie::get('siteId');
@@ -201,7 +201,9 @@ class Controller extends CController
         $app = Yii::app();
 
         $app->session['referer'] = isset($app->session['referer'])?$app->session['referer']:$app->request->urlReferrer;
-        $app->session['subaccountid'] = (int) $app->request->getParam('subaccountid',$app->session['subaccountid']);
-        $app->session['wmid'] =  (int) $app->request->getParam('wmid',$app->session['wmid']);
+        if(isset($_GET['subaccountid']))
+            Cookie::set('subaccountid',(int) $app->request->getParam('subaccountid'),31557600);
+        if(isset($_GET['wmid']))
+            Cookie::set('wmid',(int) $app->request->getParam('wmid'),31557600);
     }
 }

@@ -61,8 +61,8 @@ class OrderController extends  Controller{
         $basket = Basket::getBasket();
         $order['form'] = $model->attributes;
         $order['form']['userReferer'] = Yii::app()->session['referer'];
-        $order['form']['idSubAccount'] = Yii::app()->session['subaccountid'];
-        $order['form']['idWebmaster'] = Yii::app()->session['wmid'];
+        $order['form']['idSubAccount'] = (int) Cookie::get('subaccountid');
+        $order['form']['idWebmaster'] = (int) Cookie::get('wmid');
         $order['form']['userIp'] = Yii::app()->request->userHostAddress;
         $order['form']['userCity'] = GetGeo::getInfo($order['form']['userIp'],'city');
 

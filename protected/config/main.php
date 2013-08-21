@@ -5,7 +5,7 @@ return array(
 	'name'=>'CJ Poppers',
 	'language' => 'ru',
     'timeZone'=>'Europe/Moscow',
-	// preloading 'log' component
+    // preloading 'log' component
 	'preload'=>array('log'),
 	'import'=>array(
 		'application.models.*',
