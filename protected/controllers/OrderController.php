@@ -47,7 +47,7 @@ class OrderController extends  Controller{
         $bonus = $this->getBonus($order['totalSum']);
         $delivery = OfferDelivery::model()->with('payment_api')->findAll('t.Active=:active',array(':active'=>1));
         $counter = 0;
-        $this->pageTitle='Джойсон - Заказ';
+        $this->pageTitle='Заказ';
         $this->render('index',compact('model','delivery','order','basket','bonus','counter'));
     }
 
@@ -86,7 +86,7 @@ class OrderController extends  Controller{
     }
 
     public function actionSuccess(){
-        $this->pageTitle='Джойсон - Заказ';
+        $this->pageTitle='Заказ';
         $order = Order::getOrder();
         if(empty($order)||!isset($order['payment'])||!isset($order['delivery'])||!isset($order['totalSum']))
             $this->redirect('/');
