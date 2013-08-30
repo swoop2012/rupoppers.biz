@@ -1,11 +1,11 @@
 <div id="popular">
 	<h3>Популярные препараты</h3>
 	<ul>
-		<li><a href="<?php echo $this->createUrl('tabletki/viagra.html');?>"><img src="/images/mini_product1.png" alt=""/>Дженерик Виагра</a></li>
-		<li><a href="<?php echo $this->createUrl('tabletki/cialis.html');?>"><img src="/images/mini_product2.png" alt=""/>Дженерик Сиалис</a></li>
-		<li><a href="<?php echo $this->createUrl('tabletki/dapoxetine.html');?>"><img src="/images/mini_product3.png" alt=""/>Дапоксетин</a></li>
-		<li><a href="<?php echo $this->createUrl('tabletki/super-p-force.html');?>"><img src="/images/mini_product4.png" alt=""/>Super P-Force</a></li>
-		<li><a href="<?php echo $this->createUrl('tabletki/nabor-probnik.html');?>"><img src="/images/mini_product5.png" alt=""/>Набор «Классический»</a></li>
+        <li><a href="<?php echo $this->createUrl('product/index',array('id'=>11));?>"><img src="/images/mini_product1.png" alt=""/>Дженерик Виагра</a></li>
+        <li><a href="<?php echo $this->createUrl('product/index',array('id'=>4));?>"><img src="/images/mini_product2.png" alt=""/>Дженерик Сиалис</a></li>
+        <li><a href="<?php echo $this->createUrl('product/index',array('id'=>14));?>"><img src="/images/mini_product3.png" alt=""/>Дапоксетин</a></li>
+        <li><a href="<?php echo $this->createUrl('product/index',array('id'=>15));?>"><img src="/images/mini_product4.png" alt=""/>Super P-Force</a></li>
+        <li><a href="<?php echo $this->createUrl('product/index',array('id'=>17));?>"><img src="/images/mini_product5.png" alt=""/>Набор «Классический»</a></li>
 	</ul>
 </div>
 <div id="questions">

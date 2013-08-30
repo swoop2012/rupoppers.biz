@@ -25,7 +25,7 @@ class MyUrlRule extends CBaseUrlRule
         }
 
         if($route=='article/detail'){
-            if (isset($params['section'])){
+            if (isset($params['id'])){
                 $URL = $this->getName('Article',$params['id']);
                 return GetArray::getSetting('start_link_articles').'/'.$URL;
              }else{return false;}
