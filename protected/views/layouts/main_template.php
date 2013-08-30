@@ -51,8 +51,8 @@
 	<!-- НАВИГАЦИЯ //-->
 	<div class="navi">
 		<a class="current" href="/">Каталог</a>
-		<a href="<?php echo $this->createUrl('/info/dostavka_i_oplata.html');?>">Доставка и оплата</a>
-		<a href="<?php echo $this->createUrl('/info/instruction.html');?>">Инструкция по применению</a>
+        <a href="<?php echo $this->createUrl('article/detail',array('id'=>3));?>">Доставка и оплата</a>
+        <a href="<?php echo $this->createUrl('article/detail',array('id'=>4));?>">Вопросы-ответы</a>
 		<a href="<?php echo $this->createUrl('/site/contact');?>">Контакты</a>
 	</div>
 	<!-- /НАВИГАЦИЯ //-->
