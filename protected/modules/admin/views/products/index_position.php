@@ -144,7 +144,7 @@
                     <ol class="dd-list">
                     <?php foreach($model as $value):?>
                         <li class="dd-item dd3-item"  data-id="<?=$value->id;?>">
-                            <div class="dd-handle dd3-handle"></div><div class="dd3-content"><?= CHtml::link($value->Name,$this->createUrl('detail',array('id'=>$value->id))).($value->Active ? '' : '(Товар не показывается на сайте)');?></div>
+                            <div class="dd-handle dd3-handle"></div><div class="dd3-content"><?= CHtml::link($value->Name,$this->createUrl('detail',array('id'=>$value->id)),array('target'=>'_blank')).($value->Active ? '' : '(Товар не показывается на сайте)');?></div>
                         </li>
                     <?php endforeach;?>
                     </ol>
