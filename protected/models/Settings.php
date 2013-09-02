@@ -115,7 +115,7 @@ class Settings extends CActiveRecord
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
-        $criteria->addCondition('Attribute NOT IN("Phones","idWebmaster","Type","ValidateKey")');
+        $criteria->addCondition('Attribute NOT IN("Phones","idWebmaster","Type","ValidateKey","ChangedPosition")');
 		$criteria->compare('Attribute',$this->Attribute,true);
 		$criteria->compare('Description',$this->Description,true);
 		$criteria->compare('Value',$this->Value,true);

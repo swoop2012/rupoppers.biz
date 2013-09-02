@@ -80,6 +80,7 @@ class ProductsController extends AdminController
                 try
                 {
                     $transaction->commit();
+                    Settings::setValue('ChangedPosition',1);
                 }
                 catch(Exception $e)
                 {
