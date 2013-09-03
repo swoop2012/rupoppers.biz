@@ -1,6 +1,6 @@
 <?php
 class WriteModel extends CComponent{
-    private static $modelArray = array(
+    private $modelArray = array(
 	    'products'=>'Product',
 	    'subproduct'=>'SubProduct',
 	    'payments'=>'OfferPayment',
@@ -23,7 +23,6 @@ class WriteModel extends CComponent{
     private $keys;
     private $changedPositions;
 
-
     public function __construct(){
         $this->changedPositions = Settings::getValue('ChangedPosition');
     }
@@ -40,16 +39,16 @@ class WriteModel extends CComponent{
             $this->ids[$modelName] = $this->getId($tableName);
 
         }
-        foreach($array as $key=>$value)
-	    {
-	    if(array_key_exists($key, self::$modelArray))
-            {
-            $this->WriteArray($value,self::$modelArray[$key]);
+        foreach($array as $key=>$value){
+
+            if(array_key_exists($key, $this->modelArray)){
+                $this->WriteArray($value,$this->modelArray[$key]);
             continue;
             }
-	    if ($relation = $this->checkArray($value))
-            {
-            $this->WriteArray($value[$relation],self::$modelArray[$relation]);
+
+            if ($relation = $this->checkArray($value)){
+                if(isset($this->modelArray[$relation]))
+                    $this->WriteArray($value[$relation],$this->modelArray[$relation]);
             }
 	    if(!empty($modelName))
             {
@@ -156,8 +155,9 @@ class WriteModel extends CComponent{
             if(($attributes1->DontChangeDescriptions && in_array($key,$this->excludeFields))||
                ($attributes1->DontChangeImages && in_array($key,$this->imagesFields)))
                 continue;
-            if($key='Position'){
+            if($key=='Position'){
                 $attributes1->DefaultPosition = $value;
+                $flag=true;
                 if($this->changedPositions == 1 )
                     continue;
             }

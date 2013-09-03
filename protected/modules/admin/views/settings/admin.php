@@ -1,5 +1,11 @@
 <h1>Управление настройкам</h1>
-<?php echo CHtml::link('<span class="add">Добавить настройку</span>',$this->createUrl('create'),  // the link for open the dialog
+
+<?php
+    Yii::app()->clientScript->registerCss('update_button','
+    .btn{
+    margin-right:4px;
+    }');
+    echo CHtml::link('<span class="add">Добавить настройку</span>',$this->createUrl('create'),  // the link for open the dialog
     array('class' => 'update-dialog-create btn')
 	);
 ?>
