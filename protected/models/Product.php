@@ -25,6 +25,7 @@
  * @property string $Title
  * @property string $DontChangeImages
  * @property string $DontChangeDescriptions
+ * @property integer $DefaultPosition
  */
 class Product extends CActiveRecord
 {
@@ -63,7 +64,7 @@ class Product extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('Name,URL', 'required'),
-			array('idOffer,Active,UpPrice,id,Position,DontChangeImages,DontChangeDescriptions', 'numerical', 'integerOnly'=>true),
+			array('idOffer,Active,UpPrice,id,Position,DontChangeImages,DontChangeDescriptions,DefaultPosition', 'numerical', 'integerOnly'=>true),
 			array('Name, ShortName, PictureMain, PictureProduct1, PictureProduct2, PictureProduct3', 'length', 'max'=>100),
 			array('ShortDescription,MiddleDescription,Article','safe'),
 			array('URL','length', 'max'=>100),

@@ -3,13 +3,6 @@
     * html .cf { zoom: 1; }
     *:first-child+html .cf { zoom: 1; }
 
-    html { margin: 0; padding: 0; }
-    body { font-size: 100%; margin: 0; padding: 1.75em; font-family: 'Helvetica Neue', Arial, sans-serif; }
-
-    h1 { font-size: 1.75em; margin: 0 0 0.6em 0; }
-
-    a { color: #2996cc; }
-    a:hover { text-decoration: none; }
 
     p { line-height: 1.5em; }
     .small { color: #666; font-size: 0.875em; }
@@ -19,7 +12,7 @@
          * Nestable
          */
 
-    .dd { position: relative; display: block; margin: 0; padding: 0; max-width: 600px; list-style: none; font-size: 13px; line-height: 20px; }
+    .dd { position: relative; display: block; margin: 0; padding: 0; max-width: 900px; list-style: none; font-size: 13px; line-height: 20px; }
 
     .dd-list { display: block; position: relative; margin: 0; padding: 0; list-style: none; }
     .dd-list .dd-list { padding-left: 30px; }
@@ -27,9 +20,9 @@
 
     .dd-item,
     .dd-empty,
-    .dd-placeholder { display: block; position: relative; margin: 0; padding: 0; min-height: 20px; font-size: 13px; line-height: 20px; }
+    .dd-placeholder { display: block; position: relative; margin: 0; padding: 0; min-height: 20px; font-size: 16px; line-height: 26px; }
 
-    .dd-handle { display: block; height: 30px; margin: 5px 0; padding: 5px 10px; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ccc;
+    .dd-handle { display: block; height: 40px; margin: 5px 0; padding: 5px 10px; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ccc;
         background: #fafafa;
         background: -webkit-linear-gradient(top, #fafafa 0%, #eee 100%);
         background:    -moz-linear-gradient(top, #fafafa 0%, #eee 100%);
@@ -68,7 +61,7 @@
          * Nestable Extras
          */
 
-    .nestable-lists { display: block; clear: both; padding: 30px 0; width: 100%; border: 0; border-top: 2px solid #ddd; border-bottom: 2px solid #ddd; }
+    .nestable-lists { display: block; clear: both; width: 100%; border: 0; }
 
     #nestable-menu { padding: 0; margin: 20px 0; }
 
@@ -86,12 +79,7 @@
     #nestable2 .dd-handle:hover { background: #bbb; }
     #nestable2 .dd-item > button:before { color: #fff; }
 
-    @media only screen and (min-width: 700px) {
 
-        .dd { float: left; width: 48%; }
-        .dd + .dd { margin-left: 2%; }
-
-    }
 
     .dd-hover > .dd-handle { background: #2ea8e5 !important; }
 
@@ -99,7 +87,7 @@
          * Nestable Draggable Handles
          */
 
-    .dd3-content { display: block; height: 30px; margin: 5px 0; padding: 5px 10px 5px 40px; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ccc;
+    .dd3-content { display: block; height: 40px; margin: 5px 0; padding: 5px 10px 5px 40px; color: #333; text-decoration: none; font-weight: bold; border: 1px solid #ccc;
         background: #fafafa;
         background: -webkit-linear-gradient(top, #fafafa 0%, #eee 100%);
         background:    -moz-linear-gradient(top, #fafafa 0%, #eee 100%);
@@ -123,18 +111,20 @@
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
     }
-    .dd3-handle:before { content: '≡'; display: block; position: absolute; left: 0; top: 3px; width: 100%; text-align: center; text-indent: 0; color: #fff; font-size: 20px; font-weight: normal; }
+    .dd3-handle:before { content: '≡'; display: block; position: absolute; left: 0; top: 6px; width: 100%; text-align: center; text-indent: 0; color: #fff; font-size: 20px; font-weight: normal; }
     .dd3-handle:hover { background: #ddd; }
 </style>
 <div class="page-header">
     <h1>Товары 
     </h1>
 </div>
-<div style='height:30px;'>
+<div style='height:30px; padding: 10px 0;'>
+
 <div class="alert alert-success" style="display: none">
-    <button type="button" class="btn close">x</button> Изменения сохранены
+    <button type="button" class="btn close">x</button> Изменения позиций сохранены
 
 </div>
+<p>В таком же порядке товары выводятся на главной странице. <?=CHtml::link('Отсортировать по умолчанию',$this->createUrl('defaultPosition'));?></p>
 </div>
 <div class="row-fluid">
     <span class="span12">
@@ -144,7 +134,7 @@
                     <ol class="dd-list">
                     <?php foreach($model as $value):?>
                         <li class="dd-item dd3-item"  data-id="<?=$value->id;?>">
-                            <div class="dd-handle dd3-handle"></div><div class="dd3-content"><?= CHtml::link($value->Name,$this->createUrl('detail',array('id'=>$value->id)),array('target'=>'_blank')).($value->Active ? '' : '(Товар не показывается на сайте)');?></div>
+                            <div class="dd-handle dd3-handle"></div><div class="dd3-content"><?= CHtml::link($value->Name,$this->createUrl('detail',array('id'=>$value->id)),array('target'=>'_blank')).($value->Active ? '' : ' (Товар не показывается на сайте)');?></div>
                         </li>
                     <?php endforeach;?>
                     </ol>

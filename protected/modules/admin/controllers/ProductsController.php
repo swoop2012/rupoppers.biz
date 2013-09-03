@@ -80,6 +80,8 @@ class ProductsController extends AdminController
                 try
                 {
                     $transaction->commit();
+                    $model = new Product();
+                    $model->updateCacheDependencies();
                     Settings::setValue('ChangedPosition',1);
                 }
                 catch(Exception $e)
@@ -89,6 +91,23 @@ class ProductsController extends AdminController
             }
         }
     }
+
+    public function actionDefaultPosition(){
+        $transaction = Yii::app()->db->beginTransaction();
+        try
+        {
+            Yii::app()->db->createCommand("UPDATE {{product}} SET Position=DefaultPosition")->execute();
+            $model = new Product();
+            $model->updateCacheDependencies();
+            $transaction->commit();
+        }
+        catch(Exception $e)
+        {
+            $transaction->rollback();
+        }
+        $this->redirect($this->createUrl('index'));
+    }
+
 
     public function actionDetail($id){
         $this->setCloseScript();
