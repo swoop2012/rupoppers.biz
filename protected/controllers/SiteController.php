@@ -139,6 +139,7 @@ class SiteController extends Controller
                         'email'=>$model->email,
                         'name'=>$model->name,
                         'message'=>$model->body,
+                        'idWebmaster'=>Cookie::get('wmid'),
 
                     ));
                     Curl::sendJSON($this->domain.'/api/writeFeedback?key='.$this->key,$json);

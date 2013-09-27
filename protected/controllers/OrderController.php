@@ -67,7 +67,7 @@ class OrderController extends  Controller{
         $order['form']['userCity'] = GetGeo::getInfo($order['form']['userIp'],'city');
 
         $order['subproducts'] = $basket;
-        $order['orderNumber'] = date('m-d').mt_rand(100,999);
+        $order['orderNumber'] = mt_rand(10,99).'-'.mt_rand(10000,99999);
         Order::setOrder($order);
         $data_string = CJSON::encode($order);
 
