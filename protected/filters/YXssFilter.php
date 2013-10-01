@@ -49,7 +49,7 @@ class YXssFilter extends CFilter
         {
                 $this->actions = trim(strtoupper($this->actions));
                 // если экшн обрабатывать нет необходимости - просто выходим из фильтра
-                if($this->actions != '*' && $this->actions != 'ALL' && !in_array($filterChain->action->id,explode(',',$this->actions)))
+                if($this->actions != '*' && $this->actions != 'ALL' && !in_array(strtoupper($filterChain->action->id),explode(',',$this->actions)))
                 {
                     return true;
                 }
