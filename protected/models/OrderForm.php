@@ -11,9 +11,16 @@ class OrderForm extends CFormModel{
     
     public function rules() {
 	return array(
-	    array('email','email'),
-	    array('address,index,cityRegion,phone,fullName','required','on'=>'delivery1'),
+        array('email','email'),
+        array('address,index,cityRegion,phone,fullName','required','on'=>'delivery1'),
         array('address,phone,fullName','required','on'=>'delivery2'),
+        array('email', 'length', 'max'=>256),
+        array('fullName, cityRegion', 'length', 'max'=>256),
+        array('address', 'length', 'max'=>1024),
+        array('comment', 'length', 'max'=>2048),
+        array('phone', 'length', 'max'=>50),
+        array('phone','match','pattern'=>'/^[\d\(\)\+\s]+$/', 'message'=>'Неверный формат телефона. Могут присутствовать цифры и символы:пробел, ")", "(", "+"'),
+        array('index', 'numerical', 'integerOnly'=>true),
         array('comment,typeDelivery','safe'),
 	);
     }
