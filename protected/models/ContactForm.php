@@ -22,14 +22,20 @@ class ContactForm extends CFormModel
 			// name, email, subject and body are required
             array('email,name,body', 'required'),
             array('name, body', 'safe'),
-			//array('name, email, subject, body', 'required'),
-			// email has to be a valid email address
-			array('email', 'email'),
-			// verifyCode needs to be entered correctly
-			//array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
-		);
-	}
+            array('body','validateBody'),
+            //array('name, email, subject, body', 'required'),
+            // email has to be a valid email address
+            array('email', 'email'),
+            // verifyCode needs to be entered correctly
+            //array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
+        );
+    }
 
+    public function validateBody(){
+        if($this->checkDomain($this->body))
+            $this->addError('body','В теле сообщения находится ссылка');
+
+    }
 	/**
 	 * Declares customized attribute labels.
 	 * If not declared here, an attribute would have a label that is

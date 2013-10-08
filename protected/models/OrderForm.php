@@ -20,6 +20,7 @@ class OrderForm extends CFormModel{
         array('comment', 'length', 'max'=>2048),
         array('phone', 'length', 'max'=>50),
         array('phone','match','pattern'=>'/^[\d\(\)\+\s]+$/', 'message'=>'Неверный формат телефона. Могут присутствовать цифры и символы:пробел, ")", "(", "+"'),
+        array('index', 'length', 'max'=>20),
         array('index', 'numerical', 'integerOnly'=>true),
         array('comment,typeDelivery','safe'),
 	);
