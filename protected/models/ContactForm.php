@@ -36,6 +36,12 @@ class ContactForm extends CFormModel
             $this->addError('body','В теле сообщения находится ссылка');
 
     }
+
+    private function checkDomain($str){
+        preg_match("/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/",
+            $str, $matches);
+        return isset($matches[1]) && !empty($matches[1]);
+    }
 	/**
 	 * Declares customized attribute labels.
 	 * If not declared here, an attribute would have a label that is
