@@ -51,15 +51,18 @@ class Controller extends CController
         $clearDomain = str_replace('www.','',Yii::app()->request->hostInfo);
         $parsedDomain = parse_url($clearDomain);
         $string = str_replace('.','',$parsedDomain['host']);
+        $params = array('type'=>$type,'domain'=>$parsedDomain['host'],'hash'=>md5($string.$this->key));
+        if(!empty($subaccountid))
+            $params['subaccountid'] = $subaccountid;
+        if(!empty($wmid))
+            $params['wmid'] = $wmid;
+        if(!empty($app->session['referer']))
+            $params['referer'] = $app->session['referer'];
+
         $app->clientScript->registerScript('visit','
         $.ajax({
-             url:"'.$this->domain.'/api/setViewExt",
-             data:{domain:"'.$parsedDomain['host'].'",
-                 type:'.$type.','.
-            (!empty($subaccountid)?'subaccountid:'.$subaccountid.',':'').
-            (!empty($wmid)?'wmid:'.$wmid.',':'').'
-                hash:"'.md5($string.$this->key).'"},
-            type:"get",
+             url:"'.$this->domain.'/api/setViewExt?'.http_build_query($params).'",
+             type:"get",
              dataType: "jsonp", // Notice! JSONP <-- P (lowercase)
              success:function(json){
                 if(json.success)

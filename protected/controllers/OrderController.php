@@ -64,7 +64,6 @@ class OrderController extends  Controller{
         $order['form']['idSubAccount'] = (int) Cookie::get('subaccountid');
         $order['form']['idWebmaster'] = (int) Cookie::get('wmid');
         $order['form']['userIp'] = Yii::app()->request->userHostAddress;
-        $order['form']['userCity'] = GetGeo::getInfo($order['form']['userIp'],'city');
 
         $order['subproducts'] = $basket;
         $order['orderNumber'] = mt_rand(10,99).'-'.mt_rand(10000,99999);
