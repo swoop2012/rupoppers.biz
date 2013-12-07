@@ -1,7 +1,12 @@
 <?php
 
-class ArticleController extends AdminController
+class ArticleController extends CrudController
 {
+    function init() {
+        parent::init("article");
+        $this->setModel('Article');
+
+    }
 	public function actionIndex()
 	{
 
@@ -11,7 +16,7 @@ class ArticleController extends AdminController
 	}
     public function actionDetail($id)
     {
-        $model = $this->loadModel('Article',$id);
+        $model = $this->loadModel($id);
         if($this->updateModel($model))
             $this->redirect($this->createUrl('index'));
         $this->render('detail',compact('model'));
@@ -25,7 +30,7 @@ class ArticleController extends AdminController
     }
     public function actionDelete($id)
     {
-        $this->loadModel('Article', $id)->delete();
+        $this->loadModel($id)->delete();
         $this->redirect($this->createUrl('index'));
     }
 }

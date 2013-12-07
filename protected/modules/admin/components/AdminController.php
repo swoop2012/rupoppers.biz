@@ -281,12 +281,7 @@ class AdminController extends CController{
             return $counter;
         }
     }
-    protected function loadModel($modelName,$id){
-        $model = CActiveRecord::model($modelName)->findByPk((int) $id);
-        if($model==null)
-            throw new CHttpException(404,'The requested page does not exist.');
-        return $model;
-    }
+
     protected function loadModelExt($modelName,$params){
         $model = CActiveRecord::model($modelName)->findByAttributes($params);
         if($model==null)

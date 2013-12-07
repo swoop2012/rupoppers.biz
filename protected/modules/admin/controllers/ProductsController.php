@@ -1,6 +1,11 @@
 <?php
-class ProductsController extends AdminController
+class ProductsController extends CrudController
 {
+    function init() {
+        parent::init("products");
+        $this->setModel('Product');
+
+    }
     public function actionIndex(){
         $cs = Yii::app()->clientScript;
         $cs->registerScriptFile('/js/jquery.nestable.js');
@@ -127,13 +132,6 @@ class ProductsController extends AdminController
 	     'success'=>isset($success)?$success:0,
 	     'model'=>$model,
 	     ));
-    }
-    public function loadModel($id)
-    {
-	    $model=Product::model()->findByPk($id);
-	    if($model===null)
-		    throw new CHttpException(404,'Запрашиваемая страница не найдена!');
-	    return $model;
     }
     public function loadSubProduct($id)
     {
