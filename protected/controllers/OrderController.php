@@ -54,6 +54,9 @@ class OrderController extends  Controller{
     public function actionSetParam(){
         $request = Yii::app()->request;
         Order::setParam($request->getPost('type'),$request->getPost('id'));
+        if($request->getPost('type') == 'delivery'){
+            Order::setParam('payment',false);
+        }
     }
     private function success($model){
         Order::calculateTotal();

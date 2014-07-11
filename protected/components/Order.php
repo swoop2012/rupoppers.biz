@@ -23,6 +23,11 @@ class Order extends CComponent{
         self::setOrder($order);
     }
 
+    public static function getParam($key){
+        $order = self::getOrder();
+        return isset($order[$key])?$order[$key]:FALSE;
+    }
+
     public static function calculateTotal(){
         $basket = Basket::getBasket();
         $order  = self::getOrder();

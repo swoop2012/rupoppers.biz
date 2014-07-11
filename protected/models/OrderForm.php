@@ -36,6 +36,11 @@ class OrderForm extends CFormModel{
             'fullName'=>'Полное ФИО'
         );
     }
-    
+
+    protected function beforeValidate(){
+        if(!Order::getParam('delivery')||!Order::getParam('payment'))
+            $this->addError('fullName','Выберите способ доставки и оплаты');
+        return parent::beforeValidate();
+    }
 }
 ?>
